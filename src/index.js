@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const names = ['Jim', 'Leo', 'Bob', 'Rel', "Marianna"];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App names={names} />
   </React.StrictMode>,
   document.getElementById('root')
 );
