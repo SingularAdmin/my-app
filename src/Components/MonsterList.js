@@ -3,12 +3,18 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Monster from "./Monster"
 import "./monsterList.css"
-import { Pagination, TablePagination } from "@mui/material";
+import { Autocomplete, Pagination, TextField } from "@mui/material";
 const monsterList = ({ monsters }) => {
     let monstersList = monsters.map(monster =>
         <Monster key={monster.name} monster={monster} />
     );
-
+    const monsterOptions = () => {
+        let optionsList = [];
+        monsters.map((monster) => {
+            optionsList.push(monster.name)
+        })
+        return optionsList
+    }
     const [state, setState] = useState({
         page: 1,
         pagesLen: 0
@@ -51,7 +57,14 @@ const monsterList = ({ monsters }) => {
                 </tbody>
             </table>
             <Pagination className="pagination" count={state.pagesLen} page={state.page} variant="outlined" color="primary" shape="rounded" onChange={handleChange} />
-            <TablePagination rowsPerPageOptions={[4, 2]} />
+
+            <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={monsterOptions()}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Monster ist" />}
+            />
         </>
     )
 

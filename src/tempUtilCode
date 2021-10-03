@@ -1,0 +1,87 @@
+          {/* <TableCell sx={{ minWidth: 450 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster.Traits)} />
+                        </TableCell>
+                        <TableCell sx={{ minWidth: 650 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster.Actions)} />
+                        </TableCell>
+                        <TableCell sx={{ minWidth: 450 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster["Legendary Actions"])} />
+                        </TableCell> */}
+                        {/* <TableCell>
+                            {monster.meta}
+                        </TableCell>
+                        <TableCell>
+                            {monster["Armor Class"]}
+                        </TableCell>
+                        <TableCell>
+                            {monster["Hit Points"]}
+                        </TableCell>
+                        <TableCell>
+                            {monster.Speed}
+                        </TableCell>
+                        <TableCell>
+                            {monster.STR}
+                        </TableCell>
+                        <TableCell>
+                            {monster.STR_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster.DEX}
+                        </TableCell>
+                        <TableCell>
+                            {monster.DEX_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster.CON}
+                        </TableCell>
+                        <TableCell>
+                            {monster.CON_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster.INT}
+                        </TableCell>
+                        <TableCell>
+                            {monster.INT_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster.WIS}
+                        </TableCell>
+                        <TableCell>
+                            {monster.WIS_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster.CHA}
+                        </TableCell>
+                        <TableCell>
+                            {monster.CHA_mod}
+                        </TableCell>
+                        <TableCell>
+                            {monster["Saving Throws"]}
+                        </TableCell>
+                        <TableCell>
+                            {monster.Skills}
+                        </TableCell> */}
+                        {/* <TableCell>
+                            {monster["Damage Immunities"]}
+                        </TableCell>
+                        <TableCell>
+                            {monster.Senses}
+                        </TableCell>
+                        <TableCell>
+                            {monster.Languages}
+                        </TableCell>
+                        <TableCell>
+                            {monster.Challenge}
+                        </TableCell>
+                        <TableCell sx={{ minWidth: 450 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster.Traits)} />
+                        </TableCell>
+                        <TableCell sx={{ minWidth: 650 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster.Actions)} />
+                        </TableCell>
+                        <TableCell sx={{ minWidth: 450 }}>
+                            <div dangerouslySetInnerHTML={createMarkup(monster["Legendary Actions"])} />
+                        </TableCell>
+                        <TableCell>
+                            <img style={{ maxWidth: 500, maxHeight: 450 }} src={monster.img_url} alt="Logo" />
+                        </TableCell> */}

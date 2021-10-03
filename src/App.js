@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import MyList from './Components/MyList';
-import NameAdder from './Components/NameAdder';
 import monstersListfromFile from './DnDMonstersGenerator';
-import MonsterList from './Components/MonsterList';
+import MUIMonsterList from "./Components/MUIMonsterList";
+import { Autocomplete, TextField } from "@mui/material"
 import './App.css';
 
 
@@ -27,42 +25,30 @@ function App(props) {
       );
   }, [props.names]);
 
-  const handleNameInput = (name) => {
-    setState(prevState => ({ ...prevState, nameList: [...state.nameList, name] }));
+  const monsterOptions = () => {
+    let optionsList = [];
+    state.monsters.map((monster) => {
+      optionsList.push(monster.name)
+    })
+    return optionsList
   }
-  let me = "Jim";
-  const greetings = `hello everyone, I'm ${me} ! `;
   return (
     <div className="App">
       <header className="App-header">
-
-        <div className="NamesContainer">
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className="monsterContainer">
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={monsterOptions()}
+            sx={{ width: 800, height: 10, backgroundColor: 'white', marginBottom: 1.5 }}
+            renderInput={(params) => <TextField sx={{ backgroundColor: 'white' }} {...params} label="Monster ist" />}
+          />
           <br />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <br />
-
-          {greetings}
-
-          <nav className="nameList">
-            <MyList names={state.nameList}></MyList>
-          </nav>
-          <NameAdder addName={handleNameInput} />
-        </div>
-
-        <div>
-          <MonsterList className="MonsterContainer" monsters={state.monsters} />
+          <div style={{ width: 800, height: 900 }}>
+            <MUIMonsterList monsters={state.monsters} />
+          </div>
         </div>
       </header>
-
-
     </div >
   );
 }
