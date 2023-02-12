@@ -37,7 +37,7 @@ function App(props) {
             id="combo-box-demo"
             options={monsterOptions()}
             sx={{
-              width: 800,
+              width: 1535,
               height: 10,
               backgroundColor: "white",
               marginBottom: 1.5,
@@ -51,7 +51,7 @@ function App(props) {
             )}
           />
           <br />
-          <div style={{ width: 800, height: 900 }}>
+          <div className=".montersContainer">
             <MUIMonsterList monsters={state.monsters} />
           </div>
         </div>
