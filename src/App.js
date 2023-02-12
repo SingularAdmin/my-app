@@ -1,37 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
-import monstersListfromFile from './DnDMonstersGenerator';
+import React from "react";
+import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
+import monstersListfromFile from "./DnDMonstersGenerator";
 import MUIMonsterList from "./Components/MUIMonsterList";
-import { Autocomplete, TextField } from "@mui/material"
-import './App.css';
-
+import { Autocomplete, TextField } from "@mui/material";
+import "./App.css";
 
 function App(props) {
-
   const [state, setState] = useState({
     nameList: [],
-    monsters: []
+    monsters: [],
   });
 
   useEffect(() => {
-    monstersListfromFile()
-      .then(data =>
-        setState(
-          {
-            nameList: [...props.names], monsters: [...data]
-          }
-        )
-      );
+    monstersListfromFile().then((data) =>
+      setState({
+        nameList: [...props.names],
+        monsters: [...data],
+      })
+    );
   }, [props.names]);
 
   const monsterOptions = () => {
     let optionsList = [];
     state.monsters.map((monster) => {
-      optionsList.push(monster.name)
-    })
-    return optionsList
-  }
+      optionsList.push(monster.name);
+    });
+    return optionsList;
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -40,8 +36,19 @@ function App(props) {
             disablePortal
             id="combo-box-demo"
             options={monsterOptions()}
-            sx={{ width: 800, height: 10, backgroundColor: 'white', marginBottom: 1.5 }}
-            renderInput={(params) => <TextField sx={{ backgroundColor: 'white' }} {...params} label="Monster ist" />}
+            sx={{
+              width: 800,
+              height: 10,
+              backgroundColor: "white",
+              marginBottom: 1.5,
+            }}
+            renderInput={(params) => (
+              <TextField
+                sx={{ backgroundColor: "white" }}
+                {...params}
+                label="Monster ist"
+              />
+            )}
           />
           <br />
           <div style={{ width: 800, height: 900 }}>
@@ -49,11 +56,11 @@ function App(props) {
           </div>
         </div>
       </header>
-    </div >
+    </div>
   );
 }
 
 App.propTypes = {
-  names: PropTypes.arrayOf(PropTypes.string)
+  names: PropTypes.arrayOf(PropTypes.string),
 };
 export default App;

@@ -1,5 +1,4 @@
-
-.InputName{
+.InputName {
   border: 4px solid rgb(25, 20, 56);
 }
 
@@ -10,15 +9,14 @@
   font-size: 16px;
   padding: 14px 20px 10px 56px;
   border: 1px solid rgb(25, 20, 56);
-  text-align:center;
+  text-align: center;
   font-family: normal;
 }
-.myInput:focus{
+.myInput:focus {
   margin: 5px rgb(25, 170, 62);
-  
 }
 
-.myButton{
+.myButton {
   background-color: #eaf1f1; /* Green */
   border: none;
   color: black;
@@ -32,7 +30,7 @@
   cursor: pointer;
   width: 100%;
 }
-.myButton:hover{
-  background-color:rgb(25, 170, 62);
+.myButton:hover {
+  background-color: rgb(25, 170, 62);
   color: white;
 }

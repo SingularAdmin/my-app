@@ -11,7 +11,6 @@
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
-
 }
 
 .App-logo {
@@ -21,22 +20,24 @@
 
 .nameList {
   border: 2px solid rgb(25, 20, 56);
-  height:200px; width:99%;
-  overflow:hidden; overflow-y: scroll;
-  text-align:left;
+  height: 200px;
+  width: 99%;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-align: left;
   font-size: 14px;
 }
-.nameList:last-child{
+.nameList:last-child {
   margin-bottom: 32px;
 }
 
-.MonsterIMG:hover{
-  opacity: 0.5
+.MonsterIMG:hover {
+  opacity: 0.5;
 }
 
 .NamesContainer {
-  width:400px;
-  height:400px;
+  width: 400px;
+  height: 400px;
   border: 1px solid rgb(25, 20, 56);
 }
 
@@ -44,18 +45,18 @@
   color: #61dafb;
 }
 
-.pagination{
-  margin:1px;
+.pagination {
+  margin: 1px;
   background-color: rgba(53, 3, 87, 0.3);
   border: 2px outset rgb(7, 6, 20);
   border-radius: 9px;
 }
 
-.monsterContainer{
-  height:700px;
-  width:800px;
+.monsterContainer {
+  height: 700px;
+  width: 800px;
 }
-.MonsterListDiv{
+.MonsterListDiv {
   height: 600px;
   overflow-x: hidden;
 }
@@ -72,6 +73,5 @@
   }
   to {
     transform: rotate(360deg);
-
   }
 }
